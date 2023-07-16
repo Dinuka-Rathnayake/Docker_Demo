@@ -1,3 +1,8 @@
-FROM alpine:3.14
+# import base image file
+FROM nginx
 
-RUN echo "Hello docker!!"
+# coppy folder into docker base image file
+COPY myFolder /usr/share/nginx/html
+
+
+
