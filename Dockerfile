@@ -1,8 +1,14 @@
 # import base image file
-FROM nginx
+FROM python:3
+
+# python image working derectry
+WORKDIR /usr/src/app
 
 # coppy folder into docker base image file
-COPY myFolder /usr/share/nginx/html
+COPY pythonProject/demo.py $WORKDIR
+
+#give python run command
+CMD [ "python", "demo.py" ]
 
 
 
